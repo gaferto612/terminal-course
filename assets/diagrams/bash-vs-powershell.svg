@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: 700; fill: #1a1814; }
+      .panel-title { font-size: 15px; font-weight: 700; fill: #c8472f; text-transform: uppercase; letter-spacing: 0.1em; }
+      .box { fill: #14110d; }
+      .cmd { fill: #fabd2f; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; }
+      .text-flow { fill: #e8dcc0; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+      .object-flow { fill: #b8bb26; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+      .arrow { stroke: #c8472f; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .arrow-obj { stroke: #b8bb26; stroke-width: 2.5; fill: none; marker-end: url(#arrow-green); }
+      .obj-label { fill: #b8bb26; font-size: 10px; font-family: 'JetBrains Mono', monospace; font-style: italic; }
+      .note { fill: #3d362b; font-size: 13px; }
+      .panel-divider { stroke: #c9bda5; stroke-width: 1; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c8472f"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b8bb26"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="32" text-anchor="middle" class="title">Bash pipes text. PowerShell pipes objects.</text>
+
+  <!-- BASH side -->
+  <text x="40" y="72" class="panel-title">Bash — text streams</text>
+
+  <rect x="40" y="85" width="280" height="60" rx="6" class="box"/>
+  <text x="55" y="115" class="cmd">ps aux</text>
+  <text x="55" y="135" class="text-flow">  alice  1234  3.2  firefox</text>
+
+  <path d="M 320 115 L 380 115" class="arrow"/>
+  <text x="335" y="105" class="note" style="font-family: 'JetBrains Mono', monospace; font-size: 11px;">| text</text>
+
+  <rect x="380" y="85" width="280" height="60" rx="6" class="box"/>
+  <text x="395" y="115" class="cmd">grep firefox</text>
+  <text x="395" y="135" class="text-flow">  alice  1234  3.2  firefox</text>
+
+  <text x="40" y="170" class="note" font-style="italic">grep searches the <tspan font-weight="700">string</tspan> "firefox". If the format changes, your script breaks.</text>
+
+  <!-- divider -->
+  <line x1="40" y1="200" x2="760" y2="200" class="panel-divider"/>
+
+  <!-- POWERSHELL side -->
+  <text x="40" y="232" class="panel-title">PowerShell — object streams</text>
+
+  <rect x="40" y="245" width="280" height="100" rx="6" class="box"/>
+  <text x="55" y="275" class="cmd">Get-Process</text>
+  <text x="55" y="298" class="object-flow">[Process]</text>
+  <text x="55" y="313" class="object-flow">  Name = "firefox"</text>
+  <text x="55" y="328" class="object-flow">  Id   = 1234</text>
+  <text x="55" y="343" class="object-flow">  CPU  = 3.2</text>
+
+  <path d="M 320 295 L 380 295" class="arrow-obj"/>
+  <text x="328" y="285" class="obj-label">| object</text>
+
+  <rect x="380" y="245" width="380" height="100" rx="6" class="box"/>
+  <text x="395" y="275" class="cmd">Where-Object { $_.Name -eq "firefox" }</text>
+  <text x="395" y="298" class="object-flow">[Process]</text>
+  <text x="395" y="313" class="object-flow">  Name = "firefox"</text>
+  <text x="395" y="328" class="object-flow">  Id   = 1234</text>
+  <text x="395" y="343" class="object-flow">  CPU  = 3.2</text>
+
+  <text x="40" y="375" class="note" font-style="italic">Where-Object filters by the <tspan font-weight="700">Name property</tspan>. Format-independent. Robust.</text>
+
+  <!-- bottom takeaway -->
+  <rect x="40" y="400" width="720" height="45" rx="6" fill="#ede4d3" stroke="#c9bda5"/>
+  <text x="60" y="427" class="note" font-size="14">
+    <tspan font-weight="700" fill="#c8472f">Key insight:</tspan> Bash forces you to parse text. PowerShell hands you typed data ready to query.
+  </text>
+</svg>

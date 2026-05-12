@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: 700; fill: #1a1814; }
+      .root { font-size: 16px; font-weight: 700; fill: #c8472f; font-family: 'JetBrains Mono', monospace; }
+      .dir { font-size: 14px; font-weight: 600; fill: #1a1814; font-family: 'JetBrains Mono', monospace; }
+      .file { font-size: 13px; fill: #3d362b; font-family: 'JetBrains Mono', monospace; }
+      .you { font-size: 12px; fill: #c8472f; font-style: italic; }
+      .branch { stroke: #c9bda5; stroke-width: 1.5; fill: none; }
+      .home-highlight { fill: #c8472f; opacity: 0.1; }
+      .panel-title { font-size: 13px; font-weight: 700; fill: #c8472f; text-transform: uppercase; letter-spacing: 0.1em; }
+    </style>
+  </defs>
+
+  <text x="400" y="32" text-anchor="middle" class="title">The filesystem is a tree</text>
+
+  <!-- LEFT: LINUX/MAC -->
+  <text x="40" y="72" class="panel-title">Linux / macOS</text>
+
+  <text x="40" y="105" class="root">/</text>
+  <text x="60" y="105" class="file">← root</text>
+
+  <!-- branches from root -->
+  <path d="M 50 115 L 50 145 L 90 145" class="branch"/>
+  <text x="100" y="150" class="dir">home/</text>
+
+  <path d="M 50 145 L 50 195 L 90 195" class="branch"/>
+  <text x="100" y="200" class="dir">etc/</text>
+  <text x="160" y="200" class="file">← system config</text>
+
+  <path d="M 50 195 L 50 230 L 90 230" class="branch"/>
+  <text x="100" y="235" class="dir">usr/</text>
+  <text x="160" y="235" class="file">← programs</text>
+
+  <path d="M 50 230 L 50 265 L 90 265" class="branch"/>
+  <text x="100" y="270" class="dir">var/</text>
+  <text x="160" y="270" class="file">← logs, caches</text>
+
+  <!-- nested home/alice -->
+  <rect x="115" y="155" width="220" height="22" class="home-highlight"/>
+  <path d="M 115 145 L 115 168 L 135 168" class="branch"/>
+  <text x="145" y="173" class="dir">alice/</text>
+  <text x="220" y="173" class="you">← you are here</text>
+
+  <path d="M 135 168 L 135 195 L 165 195" class="branch"/>
+  <text x="175" y="200" class="file">Documents/</text>
+  <path d="M 135 195 L 135 220 L 165 220" class="branch"/>
+  <text x="175" y="225" class="file">Pictures/</text>
+  <path d="M 135 220 L 135 245 L 165 245" class="branch"/>
+  <text x="175" y="250" class="file">notes.txt</text>
+
+
+  <!-- RIGHT: WINDOWS -->
+  <text x="440" y="72" class="panel-title">Windows</text>
+
+  <text x="440" y="105" class="root">C:\</text>
+  <text x="475" y="105" class="file">← root of C: drive</text>
+
+  <path d="M 455 115 L 455 145 L 495 145" class="branch"/>
+  <text x="505" y="150" class="dir">Users\</text>
+
+  <path d="M 455 145 L 455 195 L 495 195" class="branch"/>
+  <text x="505" y="200" class="dir">Windows\</text>
+  <text x="600" y="200" class="file">← system</text>
+
+  <path d="M 455 195 L 455 230 L 495 230" class="branch"/>
+  <text x="505" y="235" class="dir">Program Files\</text>
+
+  <!-- nested Users/Alice -->
+  <rect x="520" y="155" width="200" height="22" class="home-highlight"/>
+  <path d="M 520 145 L 520 168 L 540 168" class="branch"/>
+  <text x="550" y="173" class="dir">Alice\</text>
+  <text x="625" y="173" class="you">← you are here</text>
+
+  <path d="M 540 168 L 540 195 L 570 195" class="branch"/>
+  <text x="580" y="200" class="file">Documents\</text>
+  <path d="M 540 195 L 540 220 L 570 220" class="branch"/>
+  <text x="580" y="225" class="file">Pictures\</text>
+  <path d="M 540 220 L 540 245 L 570 245" class="branch"/>
+  <text x="580" y="250" class="file">notes.txt</text>
+
+
+  <!-- bottom callout -->
+  <rect x="40" y="320" width="720" height="115" rx="6" fill="#ede4d3" stroke="#c9bda5"/>
+  <text x="60" y="350" class="panel-title">Key idea</text>
+  <text x="60" y="375" class="file" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">There's <tspan font-weight="700">one root</tspan> on Unix systems, and <tspan font-weight="700">one root per drive</tspan> on Windows.</text>
+  <text x="60" y="397" class="file" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">Folders nest inside folders. Your <tspan font-weight="700">home directory</tspan> (~) is where you live.</text>
+  <text x="60" y="419" class="file" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">Every command runs <tspan font-weight="700" fill="#c8472f">somewhere</tspan> on this tree. That place is your "current working directory."</text>
+</svg>

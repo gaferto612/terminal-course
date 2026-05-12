@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <style>
+      .label { font-size: 14px; font-weight: 600; fill: #1a1814; }
+      .desc { font-size: 12px; fill: #3d362b; }
+      .term-bg { fill: #f5efe4; stroke: #1a1814; stroke-width: 2; }
+      .shell-bg { fill: #ede4d3; stroke: #c8472f; stroke-width: 2; }
+      .cmd-bg { fill: #14110d; }
+      .cmd-text { fill: #e8dcc0; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+      .arrow { stroke: #1a1814; stroke-width: 1.5; fill: none; marker-end: url(#arrow); }
+      .title { font-size: 20px; font-weight: 700; fill: #1a1814; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1814"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="32" text-anchor="middle" class="title">Terminal vs. Shell vs. Command</text>
+
+  <!-- Terminal (outer) -->
+  <rect x="60" y="70" width="680" height="280" rx="8" class="term-bg"/>
+  <text x="80" y="95" class="label">1. TERMINAL — the window</text>
+  <text x="80" y="113" class="desc">The application that shows text and accepts keystrokes.</text>
+  <text x="80" y="129" class="desc">Examples: Windows Terminal, iTerm2, GNOME Terminal.</text>
+
+  <!-- Shell (middle) -->
+  <rect x="120" y="155" width="560" height="170" rx="6" class="shell-bg"/>
+  <text x="140" y="180" class="label">2. SHELL — the interpreter</text>
+  <text x="140" y="198" class="desc">Reads what you type, parses it, runs the right program.</text>
+  <text x="140" y="214" class="desc">Examples: Bash, Zsh, Fish, PowerShell.</text>
+
+  <!-- Command (inner) -->
+  <rect x="180" y="240" width="440" height="65" rx="4" class="cmd-bg"/>
+  <text x="200" y="265" class="cmd-text">$ ls -la /home</text>
+  <text x="200" y="290" class="cmd-text" fill="#c8472f">  └── 3. COMMAND — what you actually run</text>
+</svg>

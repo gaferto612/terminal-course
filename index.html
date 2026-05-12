@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Terminal Course — From zero to confident on any shell</title>
+<meta name="description" content="A complete beginner's course covering Bash, PowerShell, Zsh, Fish, CMD, WSL, Git, and the wider terminal toolbox." />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="./">
+      <span class="prompt">$</span> terminal_course
+      <span class="cursor"></span>
+    </a>
+    <nav class="site-nav">
+      <a href="#modules">Modules</a>
+      <a href="cheatsheets/">Cheatsheets</a>
+      <a href="interactive/">Try It</a>
+      <a href="https://github.com/YOUR-USERNAME/terminal-course">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="kicker">A free, open-source course</p>
+        <h1>From "<em>what's a terminal?</em>"<br/>to running anything you want.</h1>
+        <p class="lede">Master <strong>Bash</strong>, <strong>PowerShell</strong>, <strong>Zsh</strong>, <strong>Fish</strong>, <strong>CMD</strong>, <strong>WSL</strong>, and the wider command-line toolbox — built for complete beginners, with diagrams, exercises, and interactive demos.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="modules/00-getting-started/">Start the course →</a>
+          <a class="btn btn-ghost" href="#what-youll-learn">What you'll learn</a>
+        </div>
+      </div>
+
+      <div class="hero-terminal">
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">~/learn</span>
+          </div>
+          <div class="terminal-body" id="terminal-demo">
+            <p><span class="green">you@laptop</span>:<span class="blue">~</span>$ <span class="typed"></span><span class="caret">▌</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="what-youll-learn">
+  <div class="container">
+    <h2>What you'll learn</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-icon">🐧</div>
+        <h3>Bash & Unix tools</h3>
+        <p>The shell that powers Linux servers, macOS, and WSL. Navigation, pipes, grep, find, and the philosophy behind it all.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🪟</div>
+        <h3>PowerShell</h3>
+        <p>Microsoft's object-oriented shell. Cmdlets, the pipeline that passes data (not text), and why it's different.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Zsh, Fish & friends</h3>
+        <p>The modern shells. Why macOS switched to Zsh, what Fish does differently, and how to pick one.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📜</div>
+        <h3>Scripting</h3>
+        <p>From running commands to writing programs. Variables, loops, conditions, functions — in Bash and PowerShell.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔧</div>
+        <h3>The wider toolbox</h3>
+        <p>Git from the CLI, SSH, package managers, curl, jq, Python virtualenvs, tmux, and dotfiles.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🧪</div>
+        <h3>Hands-on exercises</h3>
+        <p>Every module ends with practice problems. Solutions included. Type the commands yourself — that's the whole point.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="modules-section" id="modules">
+  <div class="container">
+    <h2>The 7-part curriculum</h2>
+    <p class="section-lede">Modules build on each other. Start at the top.</p>
+
+    <ol class="module-list">
+      <li>
+        <span class="num">0</span>
+        <div>
+          <h3><a href="modules/00-getting-started/">Getting Started</a></h3>
+          <p>Set up a working terminal on Windows, macOS, or Linux.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">1</span>
+        <div>
+          <h3><a href="modules/01-foundations/">Foundations</a></h3>
+          <p>What is a shell? Files, paths, and the anatomy of a command.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">2</span>
+        <div>
+          <h3><a href="modules/02-bash-core/">Bash Core</a></h3>
+          <p>Navigation, files, permissions, pipes, redirection, processes.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">3</span>
+        <div>
+          <h3><a href="modules/03-powershell/">PowerShell</a></h3>
+          <p>Objects in the pipeline. Verb-Noun cmdlets. The Windows way.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">4</span>
+        <div>
+          <h3><a href="modules/04-other-shells/">Other Shells</a></h3>
+          <p>Zsh, Fish, CMD, WSL — comparative tour and decision guide.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">5</span>
+        <div>
+          <h3><a href="modules/05-scripting/">Scripting</a></h3>
+          <p>From commands to programs. Variables, loops, functions, debugging.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">6</span>
+        <div>
+          <h3><a href="modules/06-toolbox/">The Toolbox</a></h3>
+          <p>Git, SSH, package managers, curl, jq, Python CLI.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">7</span>
+        <div>
+          <h3><a href="modules/07-productivity/">Productivity</a></h3>
+          <p>Dotfiles, prompts, aliases, tmux, capstone project.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Ready to begin?</h2>
+    <p>The terminal is the most powerful tool on your computer. Let's learn to speak its language.</p>
+    <a class="btn btn-primary btn-large" href="modules/00-getting-started/">Start Module 0 →</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Made with care · <a href="LICENSE">MIT License</a> · <a href="CONTRIBUTING.md">Contribute</a> · <a href="https://github.com/YOUR-USERNAME/terminal-course">GitHub</a></p>
+  </div>
+</footer>
+
+<script src="assets/js/terminal-demo.js"></script>
+</body>
+</html>

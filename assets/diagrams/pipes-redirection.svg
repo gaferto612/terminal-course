@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: 700; fill: #1a1814; }
+      .h2 { font-size: 14px; font-weight: 700; fill: #c8472f; text-transform: uppercase; letter-spacing: 0.1em; }
+      .box { fill: #14110d; }
+      .cmd-text { fill: #fabd2f; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; }
+      .out-text { fill: #e8dcc0; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+      .pipe-line { stroke: #c8472f; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .redir-line { stroke: #83a598; stroke-width: 3; fill: none; marker-end: url(#arrow-blue); }
+      .file-box { fill: #ede4d3; stroke: #1a1814; stroke-width: 1.5; }
+      .file-text { fill: #1a1814; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+      .note { fill: #3d362b; font-size: 13px; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c8472f"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#83a598"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="32" text-anchor="middle" class="title">The pipe and redirection</text>
+
+  <!-- PIPE EXAMPLE -->
+  <text x="40" y="72" class="h2">Pipe | — chain commands</text>
+
+  <rect x="40" y="85" width="200" height="80" rx="6" class="box"/>
+  <text x="55" y="115" class="cmd-text">ls -la</text>
+  <text x="55" y="138" class="out-text">drwxr-x notes/</text>
+  <text x="55" y="155" class="out-text">-rw-r-- hello.txt</text>
+
+  <path d="M 240 125 L 320 125" class="pipe-line"/>
+  <text x="265" y="115" class="h2" style="font-size: 12px;">|</text>
+
+  <rect x="320" y="85" width="200" height="80" rx="6" class="box"/>
+  <text x="335" y="115" class="cmd-text">grep ".txt"</text>
+  <text x="335" y="138" class="out-text">-rw-r-- hello.txt</text>
+
+  <path d="M 520 125 L 600 125" class="pipe-line"/>
+
+  <rect x="600" y="85" width="160" height="80" rx="6" class="box"/>
+  <text x="615" y="115" class="cmd-text">wc -l</text>
+  <text x="615" y="138" class="out-text">1</text>
+
+  <text x="40" y="190" class="note" font-style="italic">Output of one command becomes the input of the next. Builds powerful chains from small parts.</text>
+
+  <!-- REDIRECT TO FILE -->
+  <text x="40" y="240" class="h2">Redirect > — save output to a file</text>
+
+  <rect x="40" y="253" width="280" height="80" rx="6" class="box"/>
+  <text x="55" y="283" class="cmd-text">ls > files.txt</text>
+  <text x="55" y="306" class="out-text">(no terminal output —</text>
+  <text x="55" y="322" class="out-text"> it went to the file)</text>
+
+  <path d="M 320 293 L 420 293" class="redir-line"/>
+  <text x="350" y="283" class="h2" style="font-size: 12px; fill: #83a598;">&gt;</text>
+
+  <rect x="420" y="253" width="180" height="80" rx="6" class="file-box"/>
+  <text x="435" y="278" class="file-text" font-weight="700">files.txt</text>
+  <text x="435" y="300" class="file-text">notes</text>
+  <text x="435" y="316" class="file-text">hello.txt</text>
+
+  <text x="40" y="358" class="note">→ <tspan font-family="'JetBrains Mono', monospace">&gt;</tspan> overwrites  ·  <tspan font-family="'JetBrains Mono', monospace">&gt;&gt;</tspan> appends  ·  <tspan font-family="'JetBrains Mono', monospace">2&gt;</tspan> redirects errors only</text>
+
+  <!-- COMBO -->
+  <text x="40" y="405" class="h2">Combined: find errors and save them</text>
+
+  <rect x="40" y="420" width="720" height="40" rx="6" class="box"/>
+  <text x="55" y="446" class="cmd-text">cat app.log | grep "ERROR" | tail -n 10 > recent-errors.txt</text>
+</svg>

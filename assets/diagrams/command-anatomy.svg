@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: 700; fill: #1a1814; }
+      .term { fill: #14110d; }
+      .cmd-cmd { fill: #fabd2f; font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 700; }
+      .cmd-flag { fill: #83a598; font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 700; }
+      .cmd-opt { fill: #b8bb26; font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 700; }
+      .cmd-arg { fill: #fb4934; font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 700; }
+      .cmd-prompt { fill: #8ec07c; font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 700; }
+      .arrow { stroke: #c9bda5; stroke-width: 1.5; fill: none; }
+      .label-yellow { fill: #fabd2f; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+      .label-blue { fill: #83a598; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+      .label-green { fill: #b8bb26; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+      .label-red { fill: #fb4934; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+      .desc { fill: #e8dcc0; font-size: 12px; font-family: ui-sans-serif, system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <text x="400" y="32" text-anchor="middle" class="title">Anatomy of a command</text>
+
+  <!-- Terminal bar -->
+  <rect x="40" y="60" width="720" height="240" rx="8" class="term"/>
+
+  <!-- Command line -->
+  <text x="70" y="125" class="cmd-prompt">$</text>
+  <text x="100" y="125" class="cmd-cmd">ls</text>
+  <text x="145" y="125" class="cmd-flag">-lah</text>
+  <text x="230" y="125" class="cmd-opt">--color=auto</text>
+  <text x="455" y="125" class="cmd-arg">/home/alice</text>
+
+  <!-- Lines pointing down -->
+  <path d="M 115 140 L 115 175" class="arrow"/>
+  <path d="M 175 140 L 175 200" class="arrow"/>
+  <path d="M 305 140 L 305 225" class="arrow"/>
+  <path d="M 520 140 L 520 250" class="arrow"/>
+
+  <!-- Labels -->
+  <text x="70" y="178" class="label-yellow">Command</text>
+  <text x="70" y="192" class="desc">The program to run</text>
+
+  <text x="135" y="203" class="label-blue">Short flags</text>
+  <text x="135" y="217" class="desc">-l -a -h combined → -lah</text>
+
+  <text x="240" y="228" class="label-green">Long option</text>
+  <text x="240" y="242" class="desc">Verbose name, often takes a value</text>
+
+  <text x="450" y="253" class="label-red">Argument</text>
+  <text x="450" y="267" class="desc">What the command operates on</text>
+
+  <text x="70" y="285" class="desc" font-style="italic">Reads as: "list (ls) the contents of /home/alice, in long format, including hidden files, with human-readable sizes, in color."</text>
+</svg>
