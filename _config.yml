@@ -1,12 +1,24 @@
 title: The Terminal Course
 description: A complete beginner's journey from "what is a terminal?" to confidently scripting across Bash, PowerShell, Zsh, Fish, and more.
-theme: jekyll-theme-cayman
 markdown: kramdown
 plugins:
   - jekyll-relative-links
+  - jekyll-default-layout
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
 relative_links:
   enabled: true
   collections: true
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 include:
   - CONTRIBUTING.md
   - LICENSE
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github

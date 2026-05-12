@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{ page.title | default: site.title }} — {{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}" />
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="{{ '/' | relative_url }}">
+      <span class="prompt">$</span> terminal_course
+      <span class="cursor"></span>
+    </a>
+    <nav class="site-nav">
+      <a href="{{ '/#modules' | relative_url }}">Modules</a>
+      <a href="{{ '/cheatsheets/' | relative_url }}">Cheatsheets</a>
+      <a href="{{ '/interactive/' | relative_url }}">Try It</a>
+      <a href="https://github.com/gaferto612/terminal-course">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="markdown-body">
+{{ content }}
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Made with care · <a href="{{ '/LICENSE' | relative_url }}">MIT License</a> · <a href="{{ '/CONTRIBUTING.md' | relative_url }}">Contribute</a> · <a href="https://github.com/gaferto612/terminal-course">GitHub</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

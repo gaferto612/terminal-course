@@ -4,10 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![GitHub Pages](https://img.shields.io/badge/docs-online-success)](https://YOUR-USERNAME.github.io/terminal-course/)
-
-> ⚠️ **Before pushing this to GitHub:** search the repo for `YOUR-USERNAME` and replace it with your actual GitHub handle.
-> Files to update: `README.md`, `index.html`, and a few example commands in `modules/06-toolbox/README.md` and `modules/07-productivity/README.md`.
+[![GitHub Pages](https://img.shields.io/badge/docs-online-success)](https://gaferto612.github.io/terminal-course/)
 
 ---
 
@@ -66,7 +63,7 @@ The course is built in **7 parts** with **32 modules**. Each module includes:
 
 The course is also available as a website with interactive demos:
 
-👉 **[Visit the course site](https://YOUR-USERNAME.github.io/terminal-course/)**
+👉 **[Visit the course site](https://gaferto612.github.io/terminal-course/)**
 
 ## 📂 Repository structure
 
