@@ -18,6 +18,10 @@ Thank you for considering a contribution! This course thrives on community input
 4. Test any commands you add on the target OS
 5. Submit a pull request with a clear description
 
+## Release / upgrade workflow
+
+For every upgrade, **always open a pull request and merge it into `main`**. Direct pushes to `main` are not allowed — even small upgrades must go through a PR so changes are reviewed and traceable.
+
 ## Style guide
 
 - Write for **complete beginners**. If you use a term, define it first.
