@@ -322,10 +322,19 @@ body {
 .feature {
   background: var(--paper-warm);
   padding: 36px 32px;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
-.feature:hover { background: var(--paper); }
+.feature:hover {
+  background: var(--paper);
+  transform: translateY(-2px);
+}
+
+.feature h3 a,
+.feature:hover h3 { color: var(--accent); }
 
 .feature-icon {
   font-size: 32px;
